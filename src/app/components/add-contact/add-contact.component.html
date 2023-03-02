@@ -1,0 +1,12 @@
+<div class = "createContact">
+    <label for="contact-name" class="contact-field">Full name </label> <br>
+    <input type="text" [(ngModel)]="newContactName" placeholder="Enter the contact name"> <br> <br>
+
+    <label for="contact-number" class="contact-field">Phone number </label> <br>
+    <input type="text" [(ngModel)]="newContactNumber" placeholder="Enter the contact number"> <br> <br>
+   
+   <div id="errorMessage" *ngIf="errorMessage"><span>Warning: </span>{{ errorMessage }}</div>
+    <div class="button-create">
+        <button (click) ="addContact()" id="addContactButton">Create new contact</button>
+    </div>
+</div>
